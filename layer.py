@@ -65,9 +65,12 @@ class GraphAttentionLayer(nn.Module):
         attention = F.dropout(attention, self.dropout, training=self.training)
         out_feature = torch.matmul(attention, neighbors_feature)
 
+        out_feature = F.normalize(out_feature, p=2, dim=1)
+
         if self.nonlinear:
-            return out_feature
-        return F.elu(out_feature)
+            out_feature = F.elu(out_feature)
+
+        return out_feature
 
     def __repr__(self):
         return self.__class__.__name__ + '(' + str(self.in_dim) + ' -> ' + str(self.out_dim) + ')'
