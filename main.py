@@ -242,8 +242,7 @@ if __name__ == "__main__":
     print "= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
 
     print "training ......"
-    # checkpoint_path, class_num = train(args)
-    checkpoint_path, class_num = 'checkpoint/checkpoint_201909121446.pth', 569
+    checkpoint_path, class_num = train(args)
 
     print "testing ......"
     test(checkpoint_path, class_num, args)
