@@ -72,5 +72,10 @@ class GraphAttentionLayer(nn.Module):
 
         return out_feature
 
+    def queryForward(self, query_feature):
+        query_feature = torch.matmul(query_feature, self.W) ## B x out_dim
+        query_feature = F.normalize(query_feature, p=2, dim=1)
+        return query_feature
+
     def __repr__(self):
         return self.__class__.__name__ + '(' + str(self.in_dim) + ' -> ' + str(self.out_dim) + ')'

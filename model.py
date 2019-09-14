@@ -33,3 +33,7 @@ class GAT(nn.Module):
         logit = self.classifier(new_feature)
         logit = F.log_softmax(logit, dim=1)
         return new_feature, logit
+
+    def queryForward(self, query_feature):
+        B, d = query_feature.size()
+        return torch.mean(torch.cat([atten.queryForward(query_feature).view(1, -1) for atten in self.attentions], dim=0), dim=0).view(B, -1)

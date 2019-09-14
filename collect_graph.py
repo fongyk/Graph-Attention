@@ -67,16 +67,17 @@ def collectGraph_train(node_num, class_num, feat_dim = 256, knn = 10, suffix = '
 def collectGraph_test(feature_path, node_num, feat_dim = 256, knn = 10, suffix = '.f.npy'):
     print "node num.:", node_num
 
-    feature_map = np.zeros((node_num, feat_dim), dtype=np.float32)
-    for n in range(node_num):
-        feature_map[n,:] = np.load(os.path.join(feature_path, str(n) + suffix))
+    feature_map = np.load(os.path.join(feature_path, 'origin_feature_map.npy'))
     similarity = np.dot(feature_map, feature_map.T)
     sort_id = np.argsort(-similarity, axis=1)
     adj_lists = defaultdict(set)
     for n in range(node_num):
         for k in range(1, knn+1):
             adj_lists[n].add(sort_id[n,k])
-    return feature_map, adj_lists
+
+    query_feature = np.load(os.path.join(feature_path, 'query.npy'))
+
+    return feature_map, adj_lists, query_feature
 
 if __name__ == "__main__":
     node_num, class_num = removeIsolated(suffix = '.f.npy')
