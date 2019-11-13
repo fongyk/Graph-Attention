@@ -15,20 +15,20 @@ from tqdm import tqdm
 import argparse
 import ast
 
-eval_func = '/data4/fong/oxford5k/evaluation/compute_ap'
-retrieval_result = '/data4/fong/pytorch/GraphAttention/retrieval'
+eval_func = '/path/to/compute_ap'
+retrieval_result = '/path/to/retrieval'
 test_dataset = {
     'oxf': {
         'node_num': 5063,
-        'img_testpath': '/data4/fong/pytorch/RankNet/building/test_oxf/images',
-        'feature_path': '/data4/fong/pytorch/Graph/test_feature/oxford/0',
-        'gt_path': '/data4/fong/oxford5k/oxford5k_groundTruth',
+        'img_testpath': '/path/to/images',
+        'feature_path': '/path/to/feature',
+        'gt_path': '/path/to/oxford5k_groundTruth',
     },
     'par': {
         'node_num': 6392,
-        'img_testpath': '/data4/fong/pytorch/RankNet/building/test_par/images',
-        'feature_path': '/data4/fong/pytorch/Graph/test_feature/paris/0',
-        'gt_path': '/data4/fong/paris6k/paris_groundTruth',
+        'img_testpath': '/path/to/images',
+        'feature_path': '/path/to/feature',
+        'gt_path': '/path/to/paris_groundTruth',
     }
 }
 building_oxf = buildTestData(img_path=test_dataset['oxf']['img_testpath'], gt_path=test_dataset['oxf']['gt_path'], eval_func=eval_func)
