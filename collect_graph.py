@@ -11,7 +11,7 @@ def removeIsolated(suffix = '.f.npy'):
     remove isolated points which have no neighbors.
     return number of nodes and categories.
     '''
-    src_folder = '/data4/fong/pytorch/Graph/train_feature'
+    src_folder = '/path/to/train_feature'
     class_folders = os.listdir(src_folder)
     node_num = 0
     class_num = 0
@@ -41,7 +41,7 @@ def collectGraph_train(node_num, class_num, feat_dim = 256, knn = 10, suffix = '
     feature_map = np.zeros((node_num, feat_dim))
     adj_lists = defaultdict(set)
 
-    src_folder = '/data4/fong/pytorch/Graph/train_feature'
+    src_folder = '/path/to/train_feature'
     class_folders = os.listdir(src_folder)
     idx = 0
     for c, folder in enumerate(class_folders):
@@ -83,4 +83,3 @@ if __name__ == "__main__":
     node_num, class_num = removeIsolated(suffix = '.f.npy')
     node_num, class_num = removeIsolated(suffix = '.fr.npy')
     node_num, class_num = removeIsolated(suffix = '.frmac.npy')
-    # label, feature_map, adj_lists = collectGraph_train(node_num, class_num)
