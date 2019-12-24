@@ -14,8 +14,6 @@ https://arxiv.org/pdf/1710.10903.pdf
 
 - landmark_clean
 
-  for Oxford5k & Parid6k
-
   https://europe.naverlabs.com/Research/Computer-Vision/Learning-Visual-Representations/Deep-Image-Retrieval/
 
 ## testing
