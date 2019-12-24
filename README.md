@@ -4,18 +4,26 @@ https://arxiv.org/pdf/1710.10903.pdf
 
 # requirements
 
-Pytorch: 1.0
+- Pytorch: 1.0
 
-Python: 2.7
+- Python: 2.7
 
 # datasets
 
 ## training
 
-Landmark-clean 
+- landmark_clean
 
-(End-to-end Learning of Deep Visual Representations for Image Retrieval, https://arxiv.org/abs/1610.07940)
+  for Oxford5k & Parid6k
 
-## test
+  https://europe.naverlabs.com/Research/Computer-Vision/Learning-Visual-Representations/Deep-Image-Retrieval/
 
-Oxford5k, Paris6k
+## testing
+
+- Oxford5k
+
+  https://www.robots.ox.ac.uk/~vgg/data/oxbuildings/
+  
+- Parid6k
+
+  https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/
