@@ -1,22 +1,22 @@
-# graph-attention
-A simple implementation of GRAPH ATTENTION NETWORKS, ICLR 2018
-https://arxiv.org/pdf/1710.10903.pdf
+# graph-attention-for-image-retrieval
 
-# requirements
+A simple implementation of [GRAPH ATTENTION NETWORKS](https://arxiv.org/pdf/1710.10903.pdf), ICLR 2018
+
+## requirements
 
 - Pytorch: 1.0
 
 - Python: 2.7
 
-# datasets
+## datasets
 
-## training
+### training
 
 - landmark_clean
 
   https://europe.naverlabs.com/Research/Computer-Vision/Learning-Visual-Representations/Deep-Image-Retrieval/
 
-## testing
+### testing
 
 - Oxford5k
 
