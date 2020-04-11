@@ -218,22 +218,8 @@ if __name__ == "__main__":
     args, _ = parser.parse_known_args()
     print "< < < < < < < < < < < GraphAttentionNetWork > > > > > > > > > >"
     print "= = = = = = = = = = = PARAMETERS SETTING = = = = = = = = = = ="
-    print "epoch_num:", args.epoch_num
-    print "step_size:", args.step_size
-    print "learning_rate_decay:", args.learning_rate_decay
-    print "batch_size:", args.batch_size
-    print "check_step:", args.check_step
-    print "train_num:", args.train_num
-    print "learning_rate:", args.learning_rate
-    print "weight_decay:", args.weight_decay
-    print "suffix:", args.suffix
-    print "feat_dim:", args.feat_dim
-    print "embed_dim:", args.embed_dim
-    print "alpha:", args.alpha
-    print "dropout:", args.dropout
-    print "nheads:", args.nheads
-    print "num_sample:", args.num_sample
-    print "use_cuda:", args.use_cuda
+    for k, v in vars(args):
+        print k, ":", v
     print "= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
 
     print "training ......"
