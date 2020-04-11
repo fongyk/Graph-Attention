@@ -218,7 +218,7 @@ if __name__ == "__main__":
     args, _ = parser.parse_known_args()
     print "< < < < < < < < < < < GraphAttentionNetWork > > > > > > > > > >"
     print "= = = = = = = = = = = PARAMETERS SETTING = = = = = = = = = = ="
-    for k, v in vars(args):
+    for k, v in vars(args).items():
         print k, ":", v
     print "= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ="
 
